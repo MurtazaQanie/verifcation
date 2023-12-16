@@ -1,0 +1,784 @@
+@font-face {
+    font-family: 'amz';
+    src: url(Amazone\ Demo.ttf);
+}
+
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nexa';
+    font-size: 14px;
+}
+
+body {
+    background-color: black !important;
+}
+
+/*--Page1--*/
+.blur-background {
+    backdrop-filter: blur(3px);
+}
+
+.navbar-nav .nav-link {
+    margin-right: 10px;
+    ;
+}
+
+.header {
+    background-image: linear-gradient(rgba(2, 6, 25, 0.2), rgba(2, 6, 25, 0.2)), url(service.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: white !important;
+}
+
+.nav-link {
+    transition: all 0.5s !important;
+    color: rgba(211, 211, 211, 0.819) !important;
+}
+
+.ddown {
+    backdrop-filter: blur(10px);
+}
+
+.ddown li a {
+    font-size: 13px !important;
+}
+
+.ddown-mn li a {
+    font-size: 13px !important;
+}
+
+.sn {
+    font-family: sans-serif !important;
+    transition: all 0.7s !important;
+    border: 0.5px rgba(128, 128, 128, 0.682) solid !important;
+    padding: 10px 15px !important;
+    letter-spacing: 0.7px;
+}
+
+.sn1 a {
+    font-size: 13px !important;
+    color: white;
+}
+
+.nav-item .nav-link {
+    font-size: 12.5px;
+    letter-spacing: 0.5px;
+    position: relative;
+    top: 10px;
+}
+
+.sn:hover {
+    color: white;
+    background-color: white !important;
+    box-shadow: 0 0 10px white, 0 0 15px white;
+
+}
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-49%, -50%);
+}
+
+.main h1 {
+    font-family: 'amz';
+    font-size: 70px !important;
+    letter-spacing: 8px;
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white, 0 0 80px white, 0 0 120px white, 0 0 150px white;
+
+}
+
+@keyframes h1-custom {
+    from {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*animation h1*/
+.main h1 {
+    opacity: 0;
+    animation: h1-custom 2s ease forwards;
+}
+
+
+.main p {
+    text-align: center;
+    color: rgba(211, 211, 211, 0.79);
+}
+
+/*animation p*/
+.main p {
+    opacity: 0;
+    animation: h1-custom 2s ease forwards;
+
+}
+
+.fp {
+    position: absolute;
+    top: 90%;
+    font-family: sans-serif;
+}
+
+.fq {
+    color: rgba(211, 211, 211, 0.79);
+    transition: 0.6s;
+}
+
+.fp span {
+    color: rgba(211, 211, 211, 0.79)
+}
+
+.fq:hover {
+    color: aqua !important;
+    transition: 0.6s;
+}
+
+.wasq,
+.txt-scroll {
+    position: absolute;
+    top: 90%;
+    right: 50px;
+}
+
+.txt-scroll {
+    color: rgba(211, 211, 211, 0.79);
+}
+
+.was {
+    border: 1px rgba(128, 128, 128, 0.682) solid !important;
+    padding: 12px 12px !important;
+    transition: ease .6s;
+}
+
+.was:hover {
+    box-shadow: 0 0 10px white, 0 0 15px white;
+}
+
+.wasq2,
+.txt-scroll2 {
+    position: fixed;
+    top: 90%;
+    right: 50px;
+    z-index: 111;
+}
+
+.txt-scroll2 {
+    color: rgba(211, 211, 211, 0.79);
+}
+
+.was2 {
+    text-decoration: none;
+    border: rgba(128, 128, 128, 0.682) solid !important;
+    padding: 12px 12px !important;
+    letter-spacing: 0.7px;
+    transition: 0.6s;
+}
+
+.was2:hover {
+    box-shadow: 0 0 10px white, 0 0 15px white;
+    transition: 0.6s;
+}
+
+.all-icon {
+    color: rgb(216, 216, 216);
+}
+
+
+/*--Cards--*/
+.wcards {
+    margin-top: 4%;
+    margin-bottom: 1%;
+}
+
+.wcards .container {
+    width: 100%;
+    position: relative;
+}
+
+.container .card {
+    position: relative;
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+
+.container .card .face1 {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    transition: 0.4s;
+}
+
+.container .card .face2 {
+    width: 100%;
+    max-width: 400px;
+    height: 0;
+    transition: 0.6s;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.container .card .face.face1 {
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    z-index: 1;
+
+}
+
+.container .card:hover .face.face1 {
+    box-shadow:
+        inset 0 0 60px whitesmoke,
+        inset 20px 0 80px #f0f,
+        inset -20px 0 80px #0ff,
+        inset 20px 0 300px #f0f,
+        inset -20px 0 300px #0ff,
+        0 0 50px #fff,
+        -10px 0 80px #f0f,
+        10px 0 80px #0ff;
+
+}
+
+.container .card .face.face1 .content {
+    opacity: .2;
+    transition: 0.5s;
+    text-align: center;
+
+}
+
+.container .card:hover .face.face1 .content {
+    opacity: 1;
+
+}
+
+.container .card .face.face1 .content i {
+    font-size: 4em;
+    color: white;
+    display: inline-block;
+
+}
+
+.container .card .face.face1 .content h3 {
+    font-size: 1em;
+    color: white;
+    text-align: center;
+
+
+}
+
+.container .card .face.face1 .content a {
+    transition: .5s;
+}
+
+.container .card .face.face2 {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    top: -20px;
+    box-sizing: border-box;
+    transform: translateY(-150px);
+}
+
+.container .card:hover .face.face2 {
+    transform: translateY(0);
+
+}
+
+.container .card:hover .face2 {
+    height: 230px;
+}
+
+.container .card .face.face2 .content p,
+a {
+    font-size: 10pt;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.container .card .face.face2 .content a {
+    text-decoration: none;
+    color: white;
+    box-sizing: border-box;
+    outline: 1px solid white;
+    padding: 10px;
+    margin: 10px 0 0;
+    display: inline-block;
+    transition: all 0.6s ease;
+}
+
+.container .card .face.face2 .content a:hover {
+    color: black;
+    background-color: white !important;
+    box-shadow: 0 0 10px white, 0 0 15px white;
+    transition: all 0.6s ease;
+
+}
+
+
+
+
+
+/*--- Icon with fixed background ---*/
+/*--Page6--*/
+.pg-6 {
+    background-image: linear-gradient(rgba(2, 6, 25, 0.2), rgba(2, 6, 25, 0.5)), url(pxfuel\ \(1\).jpg);
+    height: 30vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.pg-6 .row {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.bs,
+.sa,
+.ha,
+.ar,
+.mu,
+.rt,
+.aza {
+    color: white;
+    font-size: 20px;
+}
+
+.mu:hover,
+.rt:hover,
+.aza:hover {
+    color: aqua !important;
+    transition: 0.7s;
+}
+
+.bi-terminal,
+.bi-card-checklist,
+.bi-stopwatch {
+    font-size: 3rem !important;
+    cursor: pointer;
+}
+
+.bi-terminal:hover,
+.bi-card-checklist:hover,
+.bi-stopwatch:hover {
+    color: aqua;
+    transition: 0.7s;
+}
+
+
+/*--FAQ--*/
+.questions {
+    height: fit-content;
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+.title2 {
+    margin-top: 10% !important;
+}
+
+.faq {
+    top: 5%;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%);
+    width: 50%;
+}
+
+
+.accordion-button {
+    color: lightgray !important;
+    border: none !important;
+    background-color: black !important;
+    padding: 10px 25px !important;
+}
+
+.accordion-button:not(collapsed) {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-plus' viewBox='0 0 16 16'%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4'/%3E%3C/svg%3E") !important;
+    transition: all 0.5s;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-dash' viewBox='0 0 16 16'%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8'/%3E%3C/svg%3E") !important;
+    transition: all 0.5s;
+}
+
+.accordion.faq-border {
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.accordion:hover.faq-border {
+    transition: 0.6s;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+.faq-border {
+    border: 0.5px solid gray;
+    border-radius: 20px;
+}
+
+.answer {
+    font-family: 'Nexa';
+    font-size: 14px;
+    color: lightgray;
+}
+
+
+
+
+
+
+
+
+/*--footer--*/
+footer {
+    height: fit-content;
+}
+
+.txt-fot p {
+    color: rgb(192, 192, 192);
+    font-size: 13px;
+}
+
+footer .row {
+    padding: 0;
+    margin: 0;
+}
+
+.sub-box {
+    border: 0.1px solid black !important;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px) !important;
+    display: flex;
+}
+
+.sub-btn {
+    color: rgb(111, 111, 111);
+    height: 0px;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+.se {
+    color: rgb(111, 111, 111);
+    font-size: 18px;
+}
+
+.se:hover {
+    color: aqua !important;
+    transition: 0.6s;
+}
+
+.sub-input::placeholder {
+    color: rgb(111, 111, 111) !important;
+}
+
+.sub-input.form-control {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.media {
+    list-style: none;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+.media li {
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+.media a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.media a i {
+    font-size: 27px;
+    transition: color 0.4s ease-in-out;
+}
+
+.media a:hover i {
+    color: aqua;
+    opacity: 90%;
+    transition: 0.6s;
+}
+
+.about,
+.services,
+.project,
+.contact {
+    margin-top: 25%;
+    margin-left: 20px;
+    position: relative;
+    left: 30%;
+}
+
+.about h5,
+.services h5,
+.project h5,
+.contact h5 {
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.about ul,
+.services ul,
+.project ul,
+.contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about a,
+.services a,
+.project a,
+.contact a {
+    text-decoration: none;
+    color: rgb(105, 105, 105);
+    font-size: 13px;
+    transition: 0.3s ease-in-out;
+}
+
+.about a:hover,
+.services a:hover,
+.project a:hover,
+.contact a:hover {
+    color: lightgrey;
+    transition: 0.3s ease-in-out;
+}
+
+.copyright {
+    color: lightgray;
+    font-size: 13px;
+}
+
+
+
+@media (max-width: 1000px) {
+
+    html,
+    body {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+
+    .pg-2 {
+        height: fit-content;
+    }
+
+    .pg-2 .row {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .trp {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -36%);
+    }
+}
+
+@media (max-width: 1398px) {
+
+    html,
+    body {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+
+    .header {
+        overflow-y: hidden;
+    }
+
+    .pg-4 .txt h3 {
+        font-size: 25px;
+    }
+
+    .pg-4 .txt h4 {
+        font-size: 14px;
+    }
+
+    .pg-4 .txt p1 {
+        font-size: 12px;
+    }
+
+    .pg-5 .txt h3 {
+        font-size: 25px;
+    }
+
+    .pg-5 .txt p1 {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .box1h h4,
+    .box2h h4,
+    .box3h h4 {
+        font-size: 15px;
+    }
+
+    .box1h li,
+    .box2h li,
+    .box3h li {
+        font-size: 11px;
+    }
+
+    .box1h .as a,
+    .box2h .as a,
+    .box3h .as a {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    html,
+    body {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+
+    .trp {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .faq {
+        width: 70%;
+    }
+    
+}
+
+@media (max-width: 991px) {
+
+    html,
+    body {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+
+    .sidebar {
+        background-color: rgba(255, 255, 255, 0.01) !important;
+        backdrop-filter: blur(20px);
+
+    }
+
+    .blur-background {
+        backdrop-filter: none;
+    }
+
+    .sn {
+        margin: auto;
+    }
+
+    .row {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-top: -10px !important;
+    }
+
+    .pg-3 .row {
+        position: relative;
+        top: 300px;
+    }
+
+    .abo,
+    .ser,
+    .mem,
+    .con {
+        position: relative;
+        right: 30px;
+    }
+    .container .card .face1,
+    .container .card .face2 {
+        width: 100%;
+        max-width: none;
+    }
+    .pg-6{
+        height: fit-content;
+    }
+}
+
+@media (max-width:575px) {
+
+    html,
+    body {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+
+    body {
+        overflow-x: hidden !important;
+    }
+
+    .main h1 {
+        font-size: 45px !important;
+    }
+
+    .main p {
+        font-size: 12px !important;
+        width: 90%;
+    }
+
+    .ab {
+        position: absolute;
+        top: 65%;
+    }
+}
